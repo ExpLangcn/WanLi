@@ -40,7 +40,7 @@ exit                  退出工具
 help                  List available commands or provide detailed help for a specific command         
 pocscan               扫描单个或多个WEB应用漏洞，可指定漏洞或批量漏洞，批量漏洞请使用“*.yaml”
 ```
-# 作者微信
+# Twitter
 
 [@ExpLang_Cn](https://twitter.com/ExpLang_Cn)
 
