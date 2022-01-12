@@ -1,0 +1,6 @@
+http://rest.vulnweb.com [[32m200[0m] [[35m0[0m] [[36mAcunetix Vulnerable REST API[0m] [[35mApache,Debian,Google Font API,PHP[0m]
+http://testphp.vulnweb.com [[32m200[0m] [[35m0[0m] [[36mHome of Acunetix Art[0m] [[35mDreamWeaver,Nginx,PHP,Ubuntu[0m]
+http://testhtml5.vulnweb.com [[32m200[0m] [[35m0[0m] [[36mSecurityTweets - HTML5 test website for Acunetix Web Vulnerability Scanner[0m] [[35mAngularJS,Bootstrap,Google Font API,Nginx[0m]
+http://testaspnet.vulnweb.com [[32m200[0m] [[35m14041[0m] [[36macublog news[0m] [[35mIIS,Microsoft ASP.NET,Windows Server[0m]
+http://testasp.vulnweb.com [[32m200[0m] [[35m3538[0m] [[36macuforum forums[0m] [[35mDreamWeaver,IIS,Microsoft ASP.NET,Windows Server[0m]
+http://www.vulnweb.com [[32m200[0m] [[35m0[0m] [[36mAcunetix Web Vulnerability Scanner - Test websites[0m] [[35mNginx[0m]

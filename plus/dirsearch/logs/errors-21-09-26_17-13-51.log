@@ -1,0 +1,3 @@
+
+[21-09-26 17:13:56] - http://testphp.vulnweb.com:80/.google.token - Cannot connect to: testphp.vulnweb.com:80
+[21-09-26 17:13:57] - http://testphp.vulnweb.com:80/admin - Cannot connect to: testphp.vulnweb.com:80

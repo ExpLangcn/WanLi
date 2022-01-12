@@ -1,0 +1,234 @@
+{
+    "info": {
+        "args": "./plus/dirsearch/dirsearch.py -u https://www.baidu.com/ -r -t 150 --recursion-status=200,301,302 --exclude-sizes=3KB -q --format json -o logs/2022-01-12-18-05-34_dirscan_output.json",
+        "time": "Wed Jan 12 18:05:40 2022"
+    },
+    "results": [
+        {
+            "https://www.baidu.com:443/": [
+                {
+                    "content-length": 194,
+                    "path": "/js",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htpasswd-old",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.html",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess/",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.httr-oauth",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htgroup",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess-marco",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccessold",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.sample",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.orig",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.old",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess_sc",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccessold2",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.bak",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess-local",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.inc",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htf/",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htpasswd_test",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess_orig",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htm",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.ht_wsr.txt",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htpasswds",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htusers",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.bak1",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess~",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccessbak",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.txt",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.save",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess-dev",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.hta",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htpasswd.bak",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htpasswd.inc",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htpasswd",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htpasswd/",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess.bak",
+                    "redirect": null,
+                    "status": 200
+                },
+                {
+                    "content-length": 194,
+                    "path": "/.htaccess_extra",
+                    "redirect": null,
+                    "status": 200
+                }
+            ]
+        }
+    ]
+}
