@@ -1,6 +1,6 @@
 # WanLi
 
-**[中文版](README_CN.md)** ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)**
+**[中文版](README_CN.md)** ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[Help](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
 
 Use Dirsearch, Subfinder, Ksubdomain, Httpx, nuclei tools to quickly check target assets and perform sensitive files, sensitive paths, and vulnerability verification detection on target assets.
 
