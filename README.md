@@ -20,10 +20,7 @@ git clone https://github.com/ExpLangcn/WanLi.git
 cd WanLi & pip3 install -r requirements.txt
 vim config/config.py
 ```
-
-> Modify the corresponding path under Path, except the python path, you need to add "./"
-
-![](img/16419804357030.jpg)
+**[Help](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
 ```
 python3 WanLi.py
 ```

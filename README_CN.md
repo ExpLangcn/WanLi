@@ -21,11 +21,7 @@ git clone https://github.com/ExpLangcn/WanLi.git
 cd WanLi & pip3 install -r requirements.txt
 vim config/config.py
 ```
-
-> 修改Path下的对应路径，除了python路径其他需要加"./"
-
-![](img/16419804357030.jpg)
-
+**[Help](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
 ```
 python3 WanLi.py
 ```
