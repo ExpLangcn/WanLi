@@ -1,6 +1,7 @@
 # WanLi
 
-**[英文版](README.md)** ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)**
+**[英文版](README.md)** ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[帮助](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
+
 
 使用Dirsearch, Subfinder, Ksubdomain, Httpx、nuclei工具进行快速目标资产检查并对目标资产进行敏感文件、敏感路径、漏洞验证检测。
 
