@@ -1,0 +1,12 @@
+
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/.bluemix/pipeline.yml - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/.bash_logout - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/.badarg.log - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/.bash_prompt - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/.bithoundrc - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/js.old - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/html.zip - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:04] - http://testphp.vulnweb.com:80/.atfp_history - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:53] - http://testphp.vulnweb.com:80/polhemus - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:53] - http://testphp.vulnweb.com:80/poiuyt - Cannot connect to: testphp.vulnweb.com:80
+[22-01-07 17:25:53] - http://testphp.vulnweb.com:80/polymtl - Cannot connect to: testphp.vulnweb.com:80
