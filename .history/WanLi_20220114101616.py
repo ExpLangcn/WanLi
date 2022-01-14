@@ -87,7 +87,7 @@ class newcmd(cmd.Cmd):
 
     @cmd2.with_argparser(domain_parser)
     def do_domain(self, args):
-        '''扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名，domain \033[34mdefault.com\033[0m'''
+        '''扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名，domain \033[34mbaidu.com\033[0m'''
         if args.domain != "":
             lib.cmd.wanli.domain(args.domain)
 
@@ -100,7 +100,7 @@ class newcmd(cmd.Cmd):
 
     @cmd2.with_argparser(ddir_parser)
     def do_ddir(self, args):
-        '''扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名的敏感文件及敏感地址，ddir \033[34mdefault.com\033[0m'''
+        '''扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名的敏感文件及敏感地址，ddir \033[34mbaidu.com\033[0m'''
         if args.domain != "":
             lib.cmd.wanli.ddir(args.domain)
 
