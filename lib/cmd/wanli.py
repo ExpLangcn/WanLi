@@ -62,3 +62,9 @@ def l_pocscan(file, theme):
             console.print("[bold green][+][/bold green] [bold cyan]正在准备扫描中...")
             datatime = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
             system(config.config.nuclei + r" -u " + str(i) + " -t '" + str(theme) + "' -silent -nts -o logs/pocscan_" + datatime + r"_ok.txt -me logs/pocscan_" + datatime + r"_md/")
+
+def portscan(target):
+    console.print("[bold green][+][/bold green] [bold cyan]即将扫描 " + str(target) + " 的端口,(全端口扫描 自动验证 速度略慢 平均2-5分钟.)")
+    console.print("[bold green][+][/bold green] [bold cyan]正在准备扫描中...")
+    datatime = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+    system("sudo " + config.config.naabu + r" -p - -host " + str(target) + " -c 200 -verify -silent -o logs/portscan_" + datatime + r"_ok.txt")

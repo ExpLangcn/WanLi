@@ -1,5 +1,6 @@
 # coding=utf-8
 
+from ast import arg
 import os
 import sys
 import cmd2
@@ -68,12 +69,12 @@ class newcmd(cmd.Cmd):
     # 定义-h内容
     dirscan_parser = Cmd2ArgumentParser()
     dirscan_parser.add_argument(
-        "url", help="扫描\033[1;37;34m单个\033[0mWeb应用敏感文件及敏感地址，dirscan \033[34mhttps://www.baidu.com/\033[0m")
+        "url", help="扫描\033[1;37;34m单个\033[0mWeb应用敏感文件及敏感地址，dirscan \033[34mhttps://www.default.com/\033[0m")
     # 调用dirsearch对WEB应用进行敏感文件及敏感地址扫描
 
     @cmd2.with_argparser(dirscan_parser)
     def do_dirscan(self, args):
-        '''扫描\033[1;37;34m单个\033[0mWeb应用敏感文件及敏感地址，dirscan \033[34mhttps://www.baidu.com/\033[0m'''
+        '''扫描\033[1;37;34m单个\033[0mWeb应用敏感文件及敏感地址，dirscan \033[34mhttps://www.default.com/\033[0m'''
         if args.url != "":
             lib.cmd.wanli.dirscan(args.url)
 
@@ -81,7 +82,7 @@ class newcmd(cmd.Cmd):
     # 定义-h内容
     domain_parser = Cmd2ArgumentParser()
     domain_parser.add_argument(
-        "domain", help="扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名，domain \033[34mbaidu.com\033[0m")
+        "domain", help="扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名，domain \033[34mdefault.com\033[0m")
     # 调用subfinder及httpx进行子域名和相关域名扫描
 
     @cmd2.with_argparser(domain_parser)
@@ -94,7 +95,7 @@ class newcmd(cmd.Cmd):
     # 定义-h内容
     ddir_parser = Cmd2ArgumentParser()
     ddir_parser.add_argument(
-        "domain", help="扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名的敏感文件及敏感地址，ddir \033[34mbaidu.com\033[0m")
+        "domain", help="扫描\033[1;37;34m单个\033[0m主域名的相关域名及子域名的敏感文件及敏感地址，ddir \033[34mdefault.com\033[0m")
     # 先进行子域名检测，检测结果进行目录扫描
 
     @cmd2.with_argparser(ddir_parser)
@@ -127,7 +128,16 @@ class newcmd(cmd.Cmd):
         if args.l and args.t:
             lib.cmd.wanli.l_pocscan(args.l, args.t)
             
+    # ----------------------------------------分割----------------------------------------
+    # 定义-h内容
+    portscan_parser = Cmd2ArgumentParser()
+    portscan_parser.add_argument("host", help="探测\033[1;37;34m单个\033[0m域名或IP的开放端口，portscan \033[34mdefault.com\033[0m")
+    # 端口探测扫描
 
+    @cmd2.with_argparser(portscan_parser)
+    def do_portscan(self, args):
+        '''探测\033[1;37;34m单个\033[0m域名或IP的开放端口，portscan \033[34mdefault.com\033[0m'''
+        lib.cmd.wanli.portscan(args.host)
     # ----------------------------------------分割----------------------------------------
     # 当无法识别输入的command时调用该方法；
     def default(self, line):
