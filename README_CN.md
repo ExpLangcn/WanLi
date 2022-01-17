@@ -38,6 +38,13 @@ help                List available commands or provide detailed help for a speci
 pocscan             扫描单个或多个WEB应用漏洞，可指定漏洞或批量漏洞，批量漏洞请使用“*.yaml”
 portscan            探测单个域名或IP的开放端口，portscan default.com
 ```
+
+# BiLiBiLi
+
+**[RedCodeTm](https://www.bilibili.com/)**
+
+**[使用演示视频](https://www.bilibili.com/video/BV1hL411c7XB/)**
+
 # Twitter
 
 [@ExpLang_Cn](https://twitter.com/ExpLang_Cn)
