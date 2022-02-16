@@ -1,4 +1,4 @@
-#WanLi
+# WanLiScan
 
 **[中文文档](README_CN.md)** ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[Help](https://github.com/ExpLangcn/WanLi/wiki/Help)**
 ----
