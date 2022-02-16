@@ -73,7 +73,7 @@ optional arguments:
 
 ### We chat number
 
-![WechatIMG408](img/WechatIMG408.jpeg)
+![Wechat](img/WechatIMG408.jpeg)
 
 # Info
 
