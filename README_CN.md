@@ -65,7 +65,7 @@ optional arguments:
 
 **[RedCodeTm](https://space.bilibili.com/392628031)**
 
-**[使用演示视频](https://www.bilibili.com/video/BV1hL411c7XB/)**
+**[使用演示视频](https://www.bilibili.com/video/BV1yL4y1376F/)**
 
 # Twitter
 
