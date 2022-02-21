@@ -30,20 +30,28 @@ python3 WanLi.py -h
 
 ````
 optional arguments:
-  -h, --help        show this help message and exit
-  -fofa FOFA        使用 FOFA 进行关键字搜索 / Keyword search using FOFA.
-  -fdomain FDOMAIN  使用 FOFA 进行子域检测 / Subdomain Detection Using FOFA.
-  -fl FL            修改 FOFA 的 Limits 配置 / Modify the Limits configuration of FOFA.
-  -quake QUAKE      使用 Quake 进行关键字搜索 / Keyword search using Quake.
-  -qdomain QDOMAIN  使用 Quake 进行子域检测 / Subdomain Detection Using Quake.
-  -ql QL            修改 Quake 的 Limits 配置 / Modify the Limits configuration of Quake.
-  -domain DOMAIN    使用 FOFA、Quake、ksubdomain 进行全面的子域检测 / Comprehensive subdomain detection using FOFA, Quake, ksubdomain.
-  -pocscan POCSCAN  使用Nuclei对目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.
-  -lscan LSCAN      使用Nuclei对文件内的目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection for Targets in Files Using Nuclei.
-````
+  -h, --help      show this help message and exit
+  -fofa FOFA      使用 FOFA 进行关键字搜索 / Keyword search using FOFA.
+  -fl FL          修改 FOFA 的 Limits 配置 / Modify the Limits configuration of FOFA.
+  -quake QUAKE    使用 Quake 进行关键字搜索 / Keyword search using Quake.
+  -ql QL          修改 Quake 的 Limits 配置 / Modify the Limits configuration of Quake.
+  -domain DOMAIN  使用 FOFA、Quake、ksubdomain 进行全面的子域检测 / Comprehensive subdomain detection using FOFA, Quake, ksubdomain.
+  -scan           使用Nuclei对结果进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.
+  -poc POC        使用Nuclei对目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.
+  -lscan LSCAN    使用Nuclei对文件内的目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection for Targets in Files Using Nuclei.
+```
 
 # update log
 
+````
+2022.2.21:
+    - config problem report error solution, more suitable for Windows system
+    - Removed the Domain scan function of FOFA and Quake and merged it into the Domain parameter
+    - Improve the vulnerability scanning function, the vulnerability database will be updated before each vulnerability scan
+    - replace the pocscan parameter with the poc parameter
+    - To perform vulnerability scanning on Domain results and asset detection results, just add -scan
+```
+python3 WanLi.py -quake 'app:"thinkphp"' -scan
 ````
 2022.2.16:
     - Refactor to rewrite WanLiScan
@@ -67,7 +75,7 @@ optional arguments:
 
 **[Use demo video](https://www.bilibili.com/video/BV1yL4y1376F/)**
 
-#twitter
+# twitter
 
 [@ExpLang_Cn](https://twitter.com/ExpLang_Cn)
 

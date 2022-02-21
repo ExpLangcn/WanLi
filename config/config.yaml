@@ -1,17 +1,17 @@
 Output : "result"
 systeam : "mac" # mac、windows、linux 系统只支持64位及amd系统！小写！大写报错！
-level : 2 # 枚举几级域名，默认为2，二级域名
+level : 3 # 枚举几级域名，默认为2，二级域名
 severity : medium,high,critical # 根据严重程度运行模板 可选的值有：info,low,medium,high,critical   
 
 # ------------ FOFA用户信息 ------------
-fofa_email : ''
-fofa_Key : ''
+fofa_email : '616335643@qq.com'
+fofa_Key : '6a1246d3eab86358987fe709d2726b54'
 
 fofa_limits : 100 # 查询条数：注册用户：无、普通会员：免费前100条、高级会员：免费前10000条、企业会员：免费前100000条，须知：如果超出自己用户权限的条数将会消费F币！
 Full : False # 默认为false，是否搜索全部数据，默认和页面搜索一样,只能搜索一年内的数据，指定为true搜索全部数据
 
 # ------------ 360quake用户信息 ------------
-quake_key : ''
+quake_key : 'ff44256c-fa2b-483f-9956-b0a84e153ade'
 quake_limits : 100 # 查询条数：注册用户：每个月3000条、高级会员：每个月30000条、终身会员：每个月50000条
 ignore_cache : True # 是否忽略缓存
 latest : True # 数据去重
