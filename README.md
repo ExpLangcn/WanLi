@@ -16,12 +16,15 @@ It is convenient for red team personnel to conduct security detection on the tar
 [![asciicast](https://asciinema.org/a/461330.svg)](https://asciinema.org/a/461330)
 
 # use
+
 ````
 git clone https://github.com/ExpLangcn/WanLi.git
 cd WanLi & pip3 install -r requirements.txt
 vim config/config.yaml
 ````
+
 **[Help](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
+
 ````
 python3 WanLi.py -h
 ````
@@ -39,7 +42,7 @@ optional arguments:
   -scan           使用Nuclei对结果进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.
   -poc POC        使用Nuclei对目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.
   -lscan LSCAN    使用Nuclei对文件内的目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection for Targets in Files Using Nuclei.
-```
+````
 
 # update log
 
@@ -50,9 +53,7 @@ optional arguments:
     - Improve the vulnerability scanning function, the vulnerability database will be updated before each vulnerability scan
     - replace the pocscan parameter with the poc parameter
     - To perform vulnerability scanning on Domain results and asset detection results, just add -scan
-```
-python3 WanLi.py -quake 'app:"thinkphp"' -scan
-````
+    python3 WanLi.py -quake 'app:"thinkphp"' -scan
 2022.2.16:
     - Refactor to rewrite WanLiScan
     - Fixed FOFA asset search issue
