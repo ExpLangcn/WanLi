@@ -53,7 +53,6 @@ optional arguments:
     - Improve the vulnerability scanning function, the vulnerability database will be updated before each vulnerability scan
     - replace the pocscan parameter with the poc parameter
     - To perform vulnerability scanning on Domain results and asset detection results, just add -scan
-    python3 WanLi.py -quake 'app:"thinkphp"' -scan
 2022.2.16:
     - Refactor to rewrite WanLiScan
     - Fixed FOFA asset search issue

@@ -53,7 +53,6 @@ optional arguments:
     - 完善漏洞扫描功能，每次漏洞扫描前会进行漏洞库更新
     - pocscan参数更换为poc参数
     - 对Domain结果和资产探测结果进行漏洞扫描，只需要加入 -scan 即可
-    python3 WanLi.py -quake 'app:"thinkphp"' -scan
 2022.2.16:
     -重构重写WanLiScan
     -修复FOFA资产搜索问题
