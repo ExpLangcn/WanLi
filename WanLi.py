@@ -1,111 +1,266 @@
-import yaml
+from __future__ import print_function
+from __future__ import unicode_literals
+from prompt_toolkit import prompt
+from prompt_toolkit.styles import Style
+from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
+from prompt_toolkit.completion import WordCompleter
+import base64
 import argparse
+import sys
+import os
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(rootPath)
 import core.vulscan as vulscan
 import core.domain as domain
+import core.lib as lib
 import core.api as api
+import yaml
 import datetime as d
-import time
-from os import system, name
 from rich.console import Console
 
-with open('config/config.yaml','r') as f:
-    config = yaml.load(f, Loader=yaml.CLoader)
 console = Console()
-   
-def clear():
-    if name == 'nt':
-        _ = system('cls')
-        console.print('''[bold bule]
-         __          __         _      _    _____                 
-         \ \        / /        | |    (_)  / ____|                
-          \ \  /\  / /_ _ _ __ | |     _  | (___   ___ __ _ _ __  
-           \ \/  \/ / _` | '_ \| |    | |  \___ \ / __/ _` | '_ \ 
-            \  /\  / (_| | | | | |____| |  ____) | (_| (_| | | | |
-             \/  \/ \__,_|_| |_|______|_| |_____/ \___\__,_|_| |_|
 
-                    [bold blue]GitHub:https://github.com/ExpLangcn[/bold blue]
-           [[bold red]本工具仅供学习与参考，请勿用于非法用途！否则一切后果自负[/bold red]]
+style = Style.from_dict({
+    # User input (default text).
+    '':          '#00FF00 bold',
 
-                                                    [bold green]--Info:ExpLang[/bold green]                                                                    
-        [/bold bule]''')
-    else:
-        _ = system('clear')
-        console.print('''[bold bule]
-         __          __         _      _    _____                 
-         \ \        / /        | |    (_)  / ____|                
-          \ \  /\  / /_ _ _ __ | |     _  | (___   ___ __ _ _ __  
-           \ \/  \/ / _` | '_ \| |    | |  \___ \ / __/ _` | '_ \ 
-            \  /\  / (_| | | | | |____| |  ____) | (_| (_| | | | |
-             \/  \/ \__,_|_| |_|______|_| |_____/ \___\__,_|_| |_|
+    # Prompt.
+    'username': '#FFFFFF bold',
+    'null':'#A9A9A9 bold',
+    'fuhao':'#FFFFFF bold',
+    'args': '#FF0000 bold',
+})
+lib.clear()
+while True:
+    message = [
+    ('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")),
+    ('class:null', ' > '),
+]
+    Completer = WordCompleter(['help', 'exit','clear', 'clear', 'scan', 'fofa','quake'], ignore_case=True)
+    user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+    if user_input.strip().lower() == 'clear':
+        lib.clear()
+    if user_input.strip().lower() == 'help':
+        console.print('''
+Usage: scan.py [OPTIONS] COMMAND [ARGS]...
 
-                    [bold magenta]GitHub:https://github.com/ExpLangcn[/bold magenta]  
-           [[bold red]本工具仅供学习与参考，请勿用于非法用途！否则一切后果自负[/bold red]]  
-                                                    [bold green]--Info:ExpLang[/bold green]                                                                    
-        [/bold bule]''')
-def alter(file,old_str,new_str):
-    file_data = ""
-    with open(file, "r", encoding="utf-8") as f:
-        for line in f:
-            if old_str in line:
-                line = line.replace(old_str,new_str)
-            file_data += line
-    with open(file,"w",encoding="utf-8") as f:
-        f.write(file_data)
+Options:
+  help            Display help information.
+  clear           clear.
+  exit            Exit the WanLi Scan client.
+  run  <target>   Run target.
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-fofa', help='\033[1;32m使用 FOFA 进行关键字搜索\033[0m / \033[1;33mKeyword search using FOFA.\033[0m')
-parser.add_argument('-fl', help='\033[1;32m修改 FOFA 的 Limits 配置\033[0m / \033[1;33mModify the Limits configuration of FOFA.\033[0m')
+Commands:
+  fofa  Use FOFA for asset scanning and other functions.
+  quake Use 360 Quake for asset scanning and other functions.
+  scan  Security detection of target assets.''')
+    if user_input.strip().lower() == 'scan':
+        date = str(d.datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
+        message.clear()
+        message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+        message.append(('class:fuhao', ' (', "utf-8"))
+        message.append(('class:args', user_input.strip().lower()))
+        message.append(('class:fuhao', ')', "utf-8"))
+        message.append(('class:null', ' > '))
+        Completer = WordCompleter(['help', 'exit','clear','pocscan', 'domain','ldomain','dscan'], ignore_case=True)
+        user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+        if user_input.strip().lower() == 'clear':
+            lib.clear()
+        if user_input.strip().lower() == 'help':
+            console.print('''
+Usage: scan.py [OPTIONS] COMMAND [ARGS]...
 
-parser.add_argument('-quake', help='\033[1;32m使用 Quake 进行关键字搜索\033[0m / \033[1;33mKeyword search using Quake.\033[0m')
-parser.add_argument('-ql', help='\033[1;32m修改 Quake 的 Limits 配置\033[0m / \033[1;33mModify the Limits configuration of Quake.\033[0m')
+Options:
+  help            Display help information.
+  clear           clear.
+  exit            Exit the WanLi Scan client.
+  run  <target>   Run target.
 
-parser.add_argument('-domain', help='\033[1;32m使用 FOFA、Quake、ksubdomain 进行全面的子域检测\033[0m / \033[1;33mComprehensive subdomain detection using FOFA, Quake, ksubdomain.\033[0m')
-parser.add_argument('-scan', action='store_true', help='\033[1;32m使用Nuclei对结果进行全部漏洞扫描漏洞检测\033[0m / \033[1;33mVulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.\033[0m')
-parser.add_argument('-poc', help='\033[1;32m使用Nuclei对目标进行全部漏洞扫描漏洞检测\033[0m / \033[1;33mVulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.\033[0m')
-parser.add_argument('-lscan', help='\033[1;32m使用Nuclei对文件内的目标进行全部漏洞扫描漏洞检测\033[0m / \033[1;33mVulnerability Scanning All Vulnerability Detection for Targets in Files Using Nuclei.\033[0m')
+Commands:
+  pocscan   Vulnerability detection of target files. (Url or domain name may exist in the file)
+  domain    Subdomain probing for a single target.
+  ldomain   Subdomain detection of target files.
+  dscan     Automatically detect subdomains, and perform vulnerability scanning on subdomain detection results. (Only supports scanning a single subdomain)''')
+        if user_input.strip().lower() == 'pocscan':
+    
+            message.clear()
+            message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+            message.append(('class:fuhao', ' (', "utf-8"))
+            message.append(('class:args', user_input.strip().lower()))
+            message.append(('class:fuhao', ')', "utf-8"))
+            message.append(('class:null', ' > '))
+            Completer = WordCompleter(["run "], ignore_case=True)
+            user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+            if 'run' in user_input.strip().lower():
+                with open('config/config.yaml','r', encoding='utf-8') as f:
+                    config = yaml.load(f, Loader=yaml.CLoader)
+                a = user_input.strip().lower()
+                vulscan.pocscan(a[4:],date)
+        if user_input.strip().lower() == 'domain':
+    
+            message.clear()
+            message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+            message.append(('class:fuhao', ' (', "utf-8"))
+            message.append(('class:args', user_input.strip().lower()))
+            message.append(('class:fuhao', ')', "utf-8"))
+            message.append(('class:null', ' > '))
+            Completer = WordCompleter(["run "], ignore_case=True)
+            user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+            if 'run' in user_input.strip().lower():
+                with open('config/config.yaml','r', encoding='utf-8') as f:
+                    config = yaml.load(f, Loader=yaml.CLoader)
+                a = user_input.strip().lower()
+                domain.domainscan('-d',a[4:])
+        if user_input.strip().lower() == 'ldomain':
+    
+            message.clear()
+            message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+            message.append(('class:fuhao', ' (', "utf-8"))
+            message.append(('class:args', user_input.strip().lower()))
+            message.append(('class:fuhao', ')', "utf-8"))
+            message.append(('class:null', ' > '))
+            Completer = WordCompleter(["run "], ignore_case=True)
+            user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+            if 'run' in user_input.strip().lower():
+                with open('config/config.yaml','r', encoding='utf-8') as f:
+                    config = yaml.load(f, Loader=yaml.CLoader)
+                a = user_input.strip().lower()
+                domain.domainscan('-dl',a[4:])
+        if user_input.strip().lower() == 'dscan':
+    
+            message.clear()
+            message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+            message.append(('class:fuhao', ' (', "utf-8"))
+            message.append(('class:args', user_input.strip().lower()))
+            message.append(('class:fuhao', ')', "utf-8"))
+            message.append(('class:null', ' > '))
+            Completer = WordCompleter(["run "], ignore_case=True)
+            user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+            if 'run' in user_input.strip().lower():
+                with open('config/config.yaml','r', encoding='utf-8') as f:
+                    config = yaml.load(f, Loader=yaml.CLoader)
+                a = user_input.strip().lower()
+                domain.domainscan('-d',a[4:])
+                vulscan.pocscan('%s/domain.txt'%(config['Output']),date)
+                f.close()
+    if user_input.strip().lower() == 'fofa':
+        date = str(d.datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
 
-args = parser.parse_args()
-if args.fofa and args.scan:
-    clear()
-    api.fofa_info()
-    date = str(d.datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
-    api.fofa_search(args.fofa, date)
-    time.sleep(1)
-    vulscan.lscan(config['Output'] + '/txt/' + date + "_keyword.txt")
-elif args.fofa:
-    clear()
-    api.fofa_info()
-    date = str(d.datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
-    api.fofa_search(args.fofa, date)
-if args.fl:
-    alter("config/config.yaml", "fofa_limits : " + str(config['fofa_limits']), "fofa_limits : " + str(args.fl))
+        message.clear()
+        message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+        message.append(('class:fuhao', ' (', "utf-8"))
+        message.append(('class:args', user_input.strip().lower()))
+        message.append(('class:fuhao', ')', "utf-8"))
+        message.append(('class:null', ' > '))
+        Completer = WordCompleter(['help', 'exit','clear', 'search', 'limits','sscan'], ignore_case=True)
+        user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+        if user_input.strip().lower() == 'clear':
+            lib.clear()
+        if user_input.strip().lower() == 'help':
+            console.print('''
+Usage: scan.py [OPTIONS] COMMAND [ARGS]...
 
-if args.quake and args.scan:
-    clear()
-    api.quake_info()
-    date = str(d.datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
-    api.quake_search(args.quake, date)
-    vulscan.lscan(config['Output'] + '/txt/' + date + "_keyword.txt")
-elif args.quake:
-    clear()
-    api.quake_info()
-    date = str(d.datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
-    api.quake_search(args.quake, date)
-if args.ql:
-    alter("config/config.yaml", "quake_limits : " + str(config['quake_limits']), "quake_limits : " + str(args.ql))
+Options:
+  help            Display help information.
+  clear           clear.
+  exit            Exit the WanLi Scan client.
+  run  <target>   Run target.
 
-if args.domain and args.scan:
-    clear()
-    domain.domainscan(args.domain)
-    time.sleep(1)
-    vulscan.lscan(config['Output'] + '/' + "domain.txt")
-elif args.domain:
-    clear()
-    domain.domainscan(args.domain)
+Commands:
+  search    Asset Scanning with FOFA.
+  limits    Modify the number of FOFA searches.
+  sscan     Automatic FOFA search for assets, and automatic vulnerability scanning after the end.''')
+        if 'limits' in user_input.strip().lower():
+            with open('config/config.yaml','r', encoding='utf-8') as f:
+                config = yaml.load(f, Loader=yaml.CLoader)
+            a = user_input.strip().lower()
+            lib.alter("config/config.yaml", "fofa_limits : " + str(config['fofa_limits']), "fofa_limits : " + a[7:])
+            f.close()
+        if user_input.strip().lower() == 'search':
+    
+            message.clear()
+            message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+            message.append(('class:fuhao', ' (', "utf-8"))
+            message.append(('class:args', user_input.strip().lower()))
+            message.append(('class:fuhao', ')', "utf-8"))
+            message.append(('class:null', ' > '))
+            Completer = WordCompleter(["run "], ignore_case=True)
+            user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+            if 'run' in user_input.strip().lower():
+                with open('config/config.yaml','r', encoding='utf-8') as f:
+                    config = yaml.load(f, Loader=yaml.CLoader)
+                a = user_input.strip().lower()
+                api.fofa_search(a[4:], date)
+        if 'sscan' in user_input.strip().lower():
+            a = user_input.strip().lower()
+            with open('config/config.yaml','r', encoding='utf-8') as f:
+                config = yaml.load(f, Loader=yaml.CLoader)
+            api.fofa_search(a[5:], date)
+            vulscan.pocscan(config['Output'] + '/txt/' + date + "_keyword.txt",date)
+            f.close()
+    if user_input.strip().lower() == 'quake':
+        date = str(d.datetime.now().strftime("%Y-%m-%d-%H-%M-%S"))
 
-if args.poc:
-    clear()
-    vulscan.pocscan(args.poc)
-if args.lscan:
-    clear()
-    vulscan.lscan(args.lscan)
+        message.clear()
+        message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+        message.append(('class:fuhao', ' (', "utf-8"))
+        message.append(('class:args', user_input.strip().lower()))
+        message.append(('class:fuhao', ')', "utf-8"))
+        message.append(('class:null', ' > '))
+        Completer = WordCompleter(['help', 'exit','clear', 'search', 'limits','sscan'], ignore_case=True)
+        user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+        if user_input.strip().lower() == 'clear':
+            lib.clear()
+        if user_input.strip().lower() == 'help':
+            console.print('''
+Usage: scan.py [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  help            Display help information.
+  clear           clear.
+  exit            Exit the WanLi Scan client.
+  run  <target>   Run target.
+
+Commands:
+  search    Asset Scanning with 360 Quake.
+  limits    Modify the number of 360 Quake searches.
+  sscan     Automatic 360 Quake search for assets, and automatic vulnerability scanning after the end.''')
+        if 'limits' in user_input.strip().lower():
+            with open('config/config.yaml','r', encoding='utf-8') as f:
+                config = yaml.load(f, Loader=yaml.CLoader)
+            a = user_input.strip().lower()
+            lib.alter("config/config.yaml", "quake_limits : " + str(config['quake_limits']), "quake_limits : " + a[7:])
+            f.close()
+        if user_input.strip().lower() == 'search':
+    
+            message.clear()
+            message.append(('class:username', str(base64.b64decode("V2FuTGkgU2Nhbg=="), "utf-8")))
+            message.append(('class:fuhao', ' (', "utf-8"))
+            message.append(('class:args', user_input.strip().lower()))
+            message.append(('class:fuhao', ')', "utf-8"))
+            message.append(('class:null', ' > '))
+            Completer = WordCompleter(["run "], ignore_case=True)
+            user_input = prompt(message, style=style, auto_suggest=AutoSuggestFromHistory(), 
+                        completer=Completer)
+            if 'run' in user_input.strip().lower():
+                a = user_input.strip().lower()
+                api.quake_search(a[4:], date)
+        if 'sscan' in user_input.strip().lower():
+            with open('config/config.yaml','r', encoding='utf-8') as f:
+                config = yaml.load(f, Loader=yaml.CLoader)
+            a = user_input.strip().lower()
+            api.quake_search(a[5:], date)
+            vulscan.pocscan(config['Output'] + '/txt/' + date + "_keyword.txt",date)
+            f.close()
+    if user_input.strip().lower() == 'exit':
+        break

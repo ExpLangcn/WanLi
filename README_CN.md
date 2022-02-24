@@ -1,6 +1,6 @@
-# WanLi
+# WanLi Scan
 
-**[英文版](README.md)** ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[Docker](https://github.com/ExpLangcn/WanLi/wiki/DockerHelp)** | **[帮助](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
+**[英文说明](README.md) ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn) ｜ **[帮助](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
 ----
 
 方便红队人员对目标站点进行安全检测，快速获取资产。
@@ -10,43 +10,79 @@
 * 使用Ksubdomain进行域名Fuzz
 * 使用Httpx进行域名信息探测
 * 使用Nuclei进行漏洞利用和检测
+* 每日自动更新漏洞库
 
-# 演示
+# 功能
 
-[![asciicast](https://asciinema.org/a/461330.svg)](https://asciinema.org/a/461330)
+![image-20220224174705312](img/e6c9d24egy1gzoquvn5grj21gu0pmgp3.jpg)
+
+- [x] 调用FOFA服务进行资产探测
+
+![image-20220224174726404](img/e6c9d24egy1gzoqv8r7okj21am0fidhl.jpg)
+
+![image-20220224174250975](img/e6c9d24egy1gzoqqh5b0kj21hq0sawkr.jpg)
+
+- [x] 对FOFA资产探测结果自动进行漏洞扫描
+
+![image-20220224174351014](img/e6c9d24egy1gzoqric1naj21h80r8n44.jpg)
+
+![image-20220224170851426](img/e6c9d24egy1gzopr3lvg5j21hm0dcdkk.jpg)
+
+- [x] 调用Quake服务进行资产探测
+
+和FOFA效果一样，目前Quake正在更新升级，所以先不放效果截图.
+
+- [x] 对Quake资产探测结果自动进行漏洞扫描
+
+和FOFA效果一样，目前Quake正在更新升级，所以先不放效果截图.
+
+- [x] 对目标进行子域名探测
+
+![image-20220224174751261](img/e6c9d24egy1gzoqvo7opqj21gw0hgwh0.jpg)
+
+![image-20220224171202785](img/e6c9d24egy1gzopufl9a4j21hm0lcdlj.jpg)
+
+- [x] 对子域名探测结果自动进行漏洞扫描
+
+![image-20220224171403743](img/e6c9d24egy1gzopwj1bf1j21ho0m20z4.jpg)
+
+- [x] 程序适配Windows、Macos、Linux系统
+
+配置`config/config.yaml`文件的第三行的`system`
+
+![image-20220224171426738](img/e6c9d24egy1gzopwwimqyj20uy01o3yq.jpg)
+
+- [x] 交互式控制使用
+
+![image-20220224174700727](img/e6c9d24egy1gzoqute7hnj21gu0pmgp3.jpg)
+
+- [ ] 调用HUNTER服务进行资产探测
+- [ ] 对HUNTER资产探测结果进行漏洞扫描
+- [ ] 调用ARL进行资产探测
+- [ ] 对ARL资产结果进行漏洞扫描
+- [ ] 开发WEB可视化界面
 
 # 使用
 
 ```
 git clone https://github.com/ExpLangcn/WanLi.git
 cd WanLi & pip3 install -r requirements.txt
-vim config/config.yaml
+vim config/config.yaml # 配置FOFA信息及Quake信
 ```
 
 **[Help](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
 
 ```
-python3 WanLi.py -h
-```
-
-# 帮助
-
-```
-optional arguments:
-  -h, --help      show this help message and exit
-  -fofa FOFA      使用 FOFA 进行关键字搜索 / Keyword search using FOFA.
-  -fl FL          修改 FOFA 的 Limits 配置 / Modify the Limits configuration of FOFA.
-  -quake QUAKE    使用 Quake 进行关键字搜索 / Keyword search using Quake.
-  -ql QL          修改 Quake 的 Limits 配置 / Modify the Limits configuration of Quake.
-  -domain DOMAIN  使用 FOFA、Quake、ksubdomain 进行全面的子域检测 / Comprehensive subdomain detection using FOFA, Quake, ksubdomain.
-  -scan           使用Nuclei对结果进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.
-  -poc POC        使用Nuclei对目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection on Targets Using Nuclei.
-  -lscan LSCAN    使用Nuclei对文件内的目标进行全部漏洞扫描漏洞检测 / Vulnerability Scanning All Vulnerability Detection for Targets in Files Using Nuclei.
+python3 WanLi.py # 进入交互模式 输入Help查看帮助信息
 ```
 
 # 更新日志
 
 ```
+2022.2.24:
+		- 适配Windows系统
+		- 恢复交互式控制，去除参数控制
+		- 优化整体代码提高效率
 2022.2.21:
     - config问题报错解决 更加适配Windows系统
     - 剔除FOFA和Quake的Domain扫描功能，合并到Domain参数
@@ -71,15 +107,25 @@ optional arguments:
 
 # BiLiBiLi
 
-**[RedCodeTm](https://space.bilibili.com/392628031)**
-
-**[使用演示视频](https://www.bilibili.com/video/BV1yL4y1376F/)**
+**[RedCodeTm](https://space.bilibili.com/392628031) **
 
 # Twitter
 
-[@ExpLang_Cn](https://twitter.com/ExpLang_Cn)
+**[@ExpLang_Cn](https://twitter.com/ExpLang_Cn) **
 
-### 微信号
+# 知识星球介绍：
+
+【**一次付费 永久免费**，到期联系运营即可免费加入】 
+
+星球面向群体：主要面向信息安全研究人员. 
+
+更新周期：最晚每两天更新一次. 
+
+内容方向：`原创安全工具`｜`安全开发`｜`WEB安全`｜`内网渗透`｜`Bypass`｜`代码审计`｜`CTF`｜`免杀`｜`思路技巧`｜`实战分享`｜`最新漏洞`｜`安全资讯`
+
+![图片](https://mmbiz.qpic.cn/mmbiz_jpg/9wVk7PSWIjJQzLyRNhDuxwPovLKzY8xqOqAZnicV5ud9Xbic88kerYd3Iyq50wr2kESufRYYR9b9VPCgDc10cdLQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
+
+# 微信号
 
 ![WechatIMG408](img/WechatIMG408.jpeg)
 

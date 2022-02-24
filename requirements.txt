@@ -1,4 +1,7 @@
+click==8.0.3
 openpyxl==3.0.7
+prompt_toolkit==3.0.28
 PyYAML==6.0
 requests==2.26.0
 rich==11.2.0
+SQLAlchemy==1.4.25
