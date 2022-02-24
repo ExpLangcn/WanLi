@@ -1,6 +1,6 @@
 # WanLi Scan
 
-**[英文说明](README.md) ｜[LICENSE](LICENSE) ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn) ｜ **[帮助](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
+**[英文说明](README.md)** ｜**[LICENSE](LICENSE)** ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[帮助](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
 ----
 
 方便红队人员对目标站点进行安全检测，快速获取资产。
@@ -107,7 +107,7 @@ python3 WanLi.py # 进入交互模式 输入Help查看帮助信息
 
 # BiLiBiLi
 
-**[RedCodeTm](https://space.bilibili.com/392628031) **
+**[RedCodeTm](https://space.bilibili.com/392628031)**
 
 # Twitter
 
