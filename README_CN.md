@@ -1,6 +1,6 @@
 # WanLi Scan
 
-**[英文说明](README.md)** ｜**[LICENSE](LICENSE)** ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[帮助](https:/ /github.com/ExpLangcn/WanLi/wiki)**
+**[英文说明](README.md)** ｜ **[LICENSE](LICENSE)** ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[帮助](https://github.com/ExpLangcn/WanLi/wiki)**
 ----
 
 方便红队人员对目标站点进行安全检测，快速获取资产。
@@ -70,7 +70,7 @@ cd WanLi & pip3 install -r requirements.txt
 vim config/config.yaml # 配置FOFA信息及Quake信
 ```
 
-**[Help](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
+**[Help](https://github.com/ExpLangcn/WanLi/wiki)**
 
 ```
 python3 WanLi.py # 进入交互模式 输入Help查看帮助信息
@@ -80,9 +80,9 @@ python3 WanLi.py # 进入交互模式 输入Help查看帮助信息
 
 ```
 2022.2.24:
-		- 适配Windows系统
-		- 恢复交互式控制，去除参数控制
-		- 优化整体代码提高效率
+    - 适配Windows系统
+    - 恢复交互式控制，去除参数控制
+    - 优化整体代码提高效率
 2022.2.21:
     - config问题报错解决 更加适配Windows系统
     - 剔除FOFA和Quake的Domain扫描功能，合并到Domain参数
@@ -111,7 +111,7 @@ python3 WanLi.py # 进入交互模式 输入Help查看帮助信息
 
 # Twitter
 
-**[@ExpLang_Cn](https://twitter.com/ExpLang_Cn) **
+**[@ExpLang_Cn](https://twitter.com/ExpLang_Cn)**
 
 # 知识星球介绍：
 
