@@ -1,6 +1,6 @@
 # WanLi Scan
 
-**[中文说明](README_CN.md)** ｜**[LICENSE](LICENSE)** ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)**｜**[Help](https:/ /github.com/ExpLangcn/WanLi/wiki)**
+**[中文说明](README_CN.md)** ｜ **[LICENSE](LICENSE)** ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)**｜**[Help](https://github.com/ExpLangcn/WanLi/wiki)**
 ----
 
 It is convenient for red team personnel to conduct security detection on the target site and quickly obtain assets.
@@ -70,7 +70,7 @@ cd WanLi & pip3 install -r requirements.txt
 vim config/config.yaml # Configure FOFA information and Quake information
 ````
 
-**[Help](https://github.com/ExpLangcn/WanLi/wiki/Help---%E5%B8%AE%E5%8A%A9)**
+**[Help](https://github.com/ExpLangcn/WanLi/wiki)**
 
 ````
 python3 WanLi.py # Enter interactive mode and enter Help to view help information
