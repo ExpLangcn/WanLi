@@ -175,9 +175,9 @@ Options:
   run  <target>   Run target.
 
 Commands:
-  search    Asset Scanning with FOFA.
-  limits    Modify the number of FOFA searches.
-  sscan     Automatic FOFA search for assets, and automatic vulnerability scanning after the end.''')
+  search             Asset Scanning with FOFA.
+  limits  <target>   Modify the number of FOFA searches.
+  sscan   <target>   Automatic FOFA search for assets, and automatic vulnerability scanning after the end.''')
         if 'limits' in user_input.strip().lower():
             with open('config/config.yaml','r', encoding='utf-8') as f:
                 config = yaml.load(f, Loader=yaml.CLoader)
@@ -232,9 +232,9 @@ Options:
   run  <target>   Run target.
 
 Commands:
-  search    Asset Scanning with 360 Quake.
-  limits    Modify the number of 360 Quake searches.
-  sscan     Automatic 360 Quake search for assets, and automatic vulnerability scanning after the end.''')
+  search            Asset Scanning with 360 Quake.
+  limits <target>   Modify the number of 360 Quake searches.
+  sscan  <target>   Automatic 360 Quake search for assets, and automatic vulnerability scanning after the end.''')
         if 'limits' in user_input.strip().lower():
             with open('config/config.yaml','r', encoding='utf-8') as f:
                 config = yaml.load(f, Loader=yaml.CLoader)
