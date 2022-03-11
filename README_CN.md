@@ -12,6 +12,10 @@
 * 使用Nuclei进行漏洞利用和检测
 * 每日自动更新漏洞库
 
+# 粉丝群
+
+![image-20220224174705312](img/WechatIMG455.jpeg)
+
 # 功能
 
 ![image-20220224174705312](img/e6c9d24egy1gzoquvn5grj21gu0pmgp3.jpg)
