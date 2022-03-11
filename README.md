@@ -12,6 +12,10 @@ It is convenient for red team personnel to conduct security detection on the tar
 * Exploitation and detection using Nuclei
 * Daily automatic update of vulnerability library
 
+# 粉丝群
+
+![image-20220224174705312](img/WechatIMG455.jpeg)
+
 # Function
 
 ![image-20220224174705312](img/e6c9d24egy1gzoquvn5grj21gu0pmgp3.jpg)
