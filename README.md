@@ -1,6 +1,6 @@
 # WanLi Scan
 
-**[中文说明](README_CN.md)** ｜ **[LICENSE](LICENSE)**｜**[Help](https://github.com/ExpLangcn/WanLi/wiki)**
+**[中文说明](README_CN.md)** ｜ **[LICENSE](LICENSE)**｜**[Help](https://github.com/ExpLangcn/WanLi/wiki)**｜**[Discord](https://discord.gg/GCZzJmzW3G)**
 ----
 
 It is convenient for red team personnel to conduct security detection on the target site and quickly obtain assets.
