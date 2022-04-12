@@ -1,6 +1,6 @@
 # WanLi Scan
 
-**[英文说明](README.md)** ｜ **[LICENSE](LICENSE)** ｜ **[WanLi-ExpLang](https://twitter.com/ExpLang_Cn)** ｜ **[帮助](https://github.com/ExpLangcn/WanLi/wiki)**
+**[英文说明](README.md)** ｜ **[LICENSE](LICENSE)** ｜ ｜**[加入Discord](https://discord.gg/GCZzJmzW3G)** ｜ **[帮助](https://github.com/ExpLangcn/WanLi/wiki)**
 ----
 
 方便红队人员对目标站点进行安全检测，快速获取资产。
