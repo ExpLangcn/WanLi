@@ -1,4 +1,4 @@
-# WanLi Scan
+# WanLi Scan - 转Go 不再维护Python项目
 
 **[中文说明](README_CN.md)** ｜ **[LICENSE](LICENSE)**｜**[Help](https://github.com/ExpLangcn/WanLi/wiki)**｜**[Discord](https://discord.gg/GCZzJmzW3G)**
 ----
