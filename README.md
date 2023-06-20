@@ -1,6 +1,6 @@
 # WanLi Scan - 转Go 不再维护Python项目
 
-**[中文说明](README_CN.md)** ｜ **[LICENSE](LICENSE)**｜**[Help](https://github.com/ExpLangcn/WanLi/wiki)**｜**[Discord](https://discord.gg/GCZzJmzW3G)**
+**[中文说明](README_CN.md)** ｜ **[许可证](许可证)**｜**[帮助](https://github.com/ExpLangcn/WanLi/wiki)**｜**[Discord](https://discord.gg/GCZzJmzW3G)**
 ----
 
 It is convenient for red team personnel to conduct security detection on the target site and quickly obtain assets.
@@ -19,10 +19,6 @@ It is convenient for red team personnel to conduct security detection on the tar
 
 如您在使用本工具的过程中存在任何非法行为，您需自行承担相应后果，我们将不承担任何法律及连带责任.
 您的使用行为或者您以其他任何明示或者默示方式表示接受本协议的，即视为您已阅读并同意本协议的约束。
-
-# 粉丝群
-
-![image-20220224174705312](img/WechatIMG455.jpeg)
 
 # Function
 
@@ -82,7 +78,7 @@ cd WanLi & pip3 install -r requirements.txt
 vim config/config.yaml # Configure FOFA information and Quake information
 ````
 
-**[Help](https://github.com/ExpLangcn/WanLi/wiki)**
+**[帮助](https://github.com/ExpLangcn/WanLi/wiki)**
 
 ````
 python3 WanLi.py # Enter interactive mode and enter Help to view help information
@@ -117,13 +113,9 @@ python3 WanLi.py # Enter interactive mode and enter Help to view help informatio
     - I forgot the time...
 ````
 
-# BiLiBiLi
-
-**[RedCodeTm](https://space.bilibili.com/392628031)**
-
-# twitter
-
-**[@ExpLang_Cn](https://twitter.com/ExpLang_Cn)**
+- [**个人博客**](https://blog.yunjianxx.com/) **- 专注分享信息安全新技术、新领域的技术和知识的学习笔记，不时发布原创实用安全工具、安全脚本.**
+- [**在线武器库**](https://link.yunjianxx.com/) **- 提供安全、渗透、社工等方面书签｜为广大网络安全爱好者提供网站导航,为小白提供黑客入门网站的安全站点收集.**
+- 😄 I’m ExpLang [**Twitter**](https://twitter.com/ExpLang_Cn)、**Discord: explang**、**[Telegram](https://t.me/ExpLang)**
 
 # Knowledge Planet Introduction:
 
@@ -133,7 +125,7 @@ Planet-oriented groups: mainly for information security researchers.
 
 Update cycle: Update every two days at the latest.
 
-Content direction: `Original security tools` | `Security development` | `WEB security` | `Intranet penetration` | `Bypass` | `Code audit` | `CTF` | `Share` ｜`Latest Vulnerabilities`｜`Security Information`
+Content direction: `Original security tools` | `Security development` | `WEB security` | `Intranet penetration` | `Bypass` | `Code audit` | `CTF` | `分享` ｜`Latest Vulnerabilities`｜`Security Information`
 
 ![Picture](https://mmbiz.qpic.cn/mmbiz_jpg/9wVk7PSWIjJQzLyRNhDuxwPovLKzY8xqOqAZnicV5ud9Xbic88kerYd3Iyq50wr2kESufRYYR9b9VPCgDc10cdLQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
