@@ -1,6 +1,6 @@
 # WanLi Scan - 转Go 不再维护Python项目
 
-**[中文说明](README_CN.md)** ｜ **[许可证](许可证)**｜**[帮助](https://github.com/ExpLangcn/WanLi/wiki)**｜**[Discord](https://discord.gg/GCZzJmzW3G)**
+**[中文说明](README_CN.md)** ｜ **[许可证](许可证)**｜**[帮助](https://github.com/ExpLangcn/WanLi/wiki)**
 ----
 
 It is convenient for red team personnel to conduct security detection on the target site and quickly obtain assets.
