@@ -113,21 +113,8 @@ python3 WanLi.py # Enter interactive mode and enter Help to view help informatio
     - I forgot the time...
 ````
 
-- [**个人博客**](https://blog.yunjianxx.com/) **- 专注分享信息安全新技术、新领域的技术和知识的学习笔记，不时发布原创实用安全工具、安全脚本.**
-- [**在线武器库**](https://link.yunjianxx.com/) **- 提供安全、渗透、社工等方面书签｜为广大网络安全爱好者提供网站导航,为小白提供黑客入门网站的安全站点收集.**
-- 😄 I’m ExpLang [**Twitter**](https://twitter.com/ExpLang_Cn)、**Discord: explang**、**[Telegram](https://t.me/ExpLang)**
+#### 😄 I’m ExpLang [**Twitter**](https://twitter.com/ExpLang_Cn) 欢迎关注fo～
 
-# Knowledge Planet Introduction:
-
-[**One-time payment, permanent free**, you can join for free if you contact the operation when it expires]
-
-Planet-oriented groups: mainly for information security researchers.
-
-Update cycle: Update every two days at the latest.
-
-Content direction: `Original security tools` | `Security development` | `WEB security` | `Intranet penetration` | `Bypass` | `Code audit` | `CTF` | `分享` ｜`Latest Vulnerabilities`｜`Security Information`
-
-![Picture](https://mmbiz.qpic.cn/mmbiz_jpg/9wVk7PSWIjJQzLyRNhDuxwPovLKzY8xqOqAZnicV5ud9Xbic88kerYd3Iyq50wr2kESufRYYR9b9VPCgDc10cdLQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
 # We chat number
 
