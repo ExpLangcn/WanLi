@@ -12,10 +12,6 @@
 * 使用Nuclei进行漏洞利用和检测
 * 每日自动更新漏洞库
 
-# 粉丝群
-
-![image-20220224174705312](img/WechatIMG455.jpeg)
-
 # 功能
 
 ![image-20220224174705312](img/e6c9d24egy1gzoquvn5grj21gu0pmgp3.jpg)
@@ -109,25 +105,8 @@ python3 WanLi.py # 进入交互模式 输入Help查看帮助信息
     -我忘了时间了...
 ```
 
-# BiLiBiLi
+#### 😄 I’m ExpLang [**Twitter**](https://twitter.com/ExpLang_Cn) 欢迎关注fo～
 
-**[RedCodeTm](https://space.bilibili.com/392628031)**
-
-# Twitter
-
-**[@ExpLang_Cn](https://twitter.com/ExpLang_Cn)**
-
-# 知识星球介绍：
-
-【**一次付费 永久免费**，到期联系运营即可免费加入】 
-
-星球面向群体：主要面向信息安全研究人员. 
-
-更新周期：最晚每两天更新一次. 
-
-内容方向：`原创安全工具`｜`安全开发`｜`WEB安全`｜`内网渗透`｜`Bypass`｜`代码审计`｜`CTF`｜`免杀`｜`思路技巧`｜`实战分享`｜`最新漏洞`｜`安全资讯`
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/9wVk7PSWIjJQzLyRNhDuxwPovLKzY8xqOqAZnicV5ud9Xbic88kerYd3Iyq50wr2kESufRYYR9b9VPCgDc10cdLQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
 
 # 微信号
 
