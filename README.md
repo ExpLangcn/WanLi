@@ -1,3 +1,9 @@
+**停止更新（归档处理），请关注后续项目**
+
+**[点击关注 Twitter](https://twitter.com/ExpLang_Cn) 以便快速了解我的动态.**
+
+----
+
 # WanLi Scan - 转Go 不再维护Python项目
 
 **[中文说明](README_CN.md)** ｜ **[许可证](许可证)**｜**[帮助](https://github.com/ExpLangcn/WanLi/wiki)**
